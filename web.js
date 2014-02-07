@@ -2,6 +2,14 @@ var express = require("express");
 var logfmt = require("logfmt");
 var app = express();
 var mongo = require('mongodb');
+var redis = requre('redis-url').connect(process.env.REDISTOGO_URL);
+
+redis.set('foo', 'bar');
+
+redis.get('foo', function(err, value) {
+	console.log('foo is: ' + vallue);
+});
+
 
 var mongoUri = process.env.MONGOLAB_URI ||
 	process.env.MONGOHQ_URL ||
