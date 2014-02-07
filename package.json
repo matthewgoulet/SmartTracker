@@ -1,0 +1,19 @@
+{
+  "name": "SmartTracker",
+  "version": "0.0.1",
+  "description": "Application for progress tracking. Alternative to gantt charts.",
+  "main": "web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@heroku.com:serene-depths-3892.git"
+  },
+  "author": "Matthew Goulet",
+  "license": "ISC",
+  "dependencies": {
+    "logfmt": "~0.20.0",
+    "express": "~3.4.8"
+  }
+}
