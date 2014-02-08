@@ -3,7 +3,7 @@ var logfmt = require("logfmt");
 var app = express();
 var mongo = require('mongodb');
 var redis = requre('redis-url').connect(process.env.REDISTOGO_URL);
-var mongoose = require('mongoose');
+var mongoose = require("mongoose");
 
 redis.set('foo', 'bar');
 
