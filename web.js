@@ -27,7 +27,7 @@ mongoose.connect(mongoUri, function (err, res) {
 var userSchema = new mongoose.Schema({
 	name: {
 	first: String,
-	last: { type: STring, trim: true }
+	last: { type: String, trim: true }
 	},
 	age: { type: Number, min:0}
 });
