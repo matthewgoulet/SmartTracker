@@ -41,8 +41,6 @@ var admin = new PUser ({
 
 admin.save(function (err) {if (err) console.log ('Error on Save!')});
 	
-
-
 app.use(logfmt.requestLogger());
 
 app.get('/', function(req, res) {
