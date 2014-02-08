@@ -16,11 +16,12 @@ var mongoUri = process.env.MONGOLAB_URI ||
 	process.env.MONGOHQ_URL ||
 	'mongodb://heroku_app22012954:SmartTracker1@ds027509.mongolab.com:27509/heroku_app22012954';
 
-mongoose.connect(mongoUri, function (err, db) {
-	db.collection('mydocs', function(er, collection) {
-		collection.insert({'mykey': 'vLXd7kNkFPShIejeAuQRqmQCEaMCambU'}, {safe: true}, function(er,rs) {
-		});
-	});
+mongoose.connect(mongoUri, function (err, res) {
+  if (err) {
+  console.log ('ERROR connecting to: ' + uristring + '. ' + err);
+  } else {
+  console.log ('Succeeded connected to: ' + uristring);
+  }
 });
 
 
