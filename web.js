@@ -7,7 +7,7 @@ var mongoose = require("mongoose");
 redis.set('foo', 'bar');
 
 redis.get('foo', function(err, value) {
-	console.log('foo is: ' + vallue);
+	console.log('foo is: ' + value);
 });
 
 
