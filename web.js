@@ -24,6 +24,25 @@ mongoose.connect(mongoUri, function (err, res) {
 });
 
 
+var userSchema = new mongoose.Schema({
+	name: {
+	first: String,
+	last: { type: STring, trim: true }
+	},
+	age: { type: Number, min:0}
+});
+
+var PUser = mongoose.model('PowerUsers', userSchema);
+
+var admin = new PUser ({
+	name: { first: 'Matthew', last: '	Goulet	'},
+	age: 22
+});
+
+admin.save(function (err) {if (err) console.log ('Error on Save!')});
+	
+
+
 app.use(logfmt.requestLogger());
 
 app.get('/', function(req, res) {
